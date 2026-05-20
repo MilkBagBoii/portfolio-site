@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Game developer portfolio with multi-engine experience and released games.">
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#games">Skip to released games</a>
+
+    <header class="site-header" data-nav>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Portfolio home">
+          <span class="brand-mark" aria-hidden="true">GD</span>
+          <span class="brand-text" data-profile-name>Your Name</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#engines">Engines</a>
+          <a href="#work">Projects</a>
+          <a href="#games">Released Games</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-itch" href="https://yourname.itch.io" target="_blank" rel="noreferrer" data-itch-link>itch.io</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Multi-engine game developer</p>
+            <h1 id="hero-title">Building playable systems across engines.</h1>
+            <p class="hero-lede" data-profile-summary>
+              A portfolio for a game developer with experience in Unity, Unreal Engine, Godot, and custom tools.
+            </p>
+
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#games">View playable games</a>
+              <a class="button button-secondary" href="https://yourname.itch.io" target="_blank" rel="noreferrer" data-itch-link>Open itch.io</a>
+            </div>
+
+            <dl class="signal-strip" aria-label="Portfolio highlights">
+              <div>
+                <dt data-stat-engines>4</dt>
+                <dd>Engines</dd>
+              </div>
+              <div>
+                <dt data-stat-projects>8</dt>
+                <dd>Projects</dd>
+              </div>
+              <div>
+                <dt data-stat-playable>5</dt>
+                <dd>Playable</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-reel" aria-label="Animated game reel">
+            <div class="reel-topline">
+              <span>Live build reel</span>
+              <span data-build-status>Available for projects</span>
+            </div>
+            <canvas id="game-reel" width="960" height="640" aria-label="Animated abstract gameplay reel"></canvas>
+            <div class="reel-controls" aria-label="Reel details">
+              <span>Systems</span>
+              <span>Gameplay</span>
+              <span>Tools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band engine-band" id="engines" aria-labelledby="engines-title">
+        <div class="section-heading">
+          <p class="eyebrow">Engine coverage</p>
+          <h2 id="engines-title">Comfortable moving between toolchains.</h2>
+          <p>
+            Showcase where each engine fits in your work: prototypes, shipped games, level work, gameplay systems, and technical art.
+          </p>
+        </div>
+        <div class="engine-grid" data-engine-grid></div>
+      </section>
+
+      <section class="section-band work-band" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Projects by engine, scope, and release status.</h2>
+        </div>
+
+        <div class="filter-row" aria-label="Filter projects by engine" data-filter-row></div>
+        <div class="project-grid" data-project-grid></div>
+      </section>
+
+      <section class="section-band profile-band" aria-labelledby="profile-title">
+        <div class="profile-layout">
+          <div class="section-heading tight">
+            <p class="eyebrow">How I work</p>
+            <h2 id="profile-title">Gameplay first, tools when they make the game faster.</h2>
+          </div>
+
+          <div class="skill-matrix" data-skill-matrix></div>
+        </div>
+      </section>
+
+      <section class="section-band games-band" id="games" aria-labelledby="games-title">
+        <div class="games-header">
+          <div class="section-heading tight">
+            <p class="eyebrow">Playable and released</p>
+            <h2 id="games-title">All public games in one place.</h2>
+          </div>
+          <a class="button button-secondary" href="https://yourname.itch.io" target="_blank" rel="noreferrer" data-itch-link>Full itch page</a>
+        </div>
+
+        <div class="games-list" data-games-list></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="footer-kicker">Open to collaborations, jams, contract work, and teams that care about feel.</p>
+        <h2 data-contact-heading>Let us build something playable.</h2>
+      </div>
+      <div class="footer-actions">
+        <a class="button button-primary" href="mailto:you@example.com" data-email-link>Email me</a>
+        <a class="button button-secondary" href="https://yourname.itch.io" target="_blank" rel="noreferrer" data-itch-link>itch.io</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
