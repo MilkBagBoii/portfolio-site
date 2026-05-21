@@ -1,9 +1,10 @@
 const portfolio = {
+  siteTitle: "john-leonardo_portfolio_site",
   name: "John D Leonardo",
   initials: "JDL",
   itchUrl: "https://milkbagboii.itch.io/",
   email: "johnleonardo207@gmail.com",
-  reelUrl: "",
+  reelUrl: "https://youtu.be/w7AVJSCGE-w",
   reelTitle: "John D Leonardo work reel",
   status: "Released games, prototypes, and in-development work",
   summary:
@@ -12,44 +13,47 @@ const portfolio = {
     {
       name: "Unity",
       initials: "U",
+      logo: "assets/unity-logo.png",
       level: "FPS prototypes and systems",
       color: "#31a8c9",
       confidence: 86,
-      notes: "Unity projects focused on FPS mechanics, browser-playable prototypes, changing levels, and replayable loadouts."
+      notes: "Built FPS controller systems, objective tracking, hostage extraction rules, randomized loadouts, level flow, UI feedback, and browser build support."
     },
     {
       name: "Unreal 5",
       initials: "UE",
+      logo: "assets/unreal-logo.png",
       level: "Horror, action, and arcade games",
       color: "#ef4e3a",
       confidence: 88,
-      notes: "Unreal projects across retail chaos, horror exploration, fighting concepts, and quick assignment-scale games."
+      notes: "Built interaction systems, customer and enemy behavior, first-person horror exploration, melee combat rules, pickup loops, and Blueprint-driven level events."
     },
     {
       name: "Godot",
       initials: "G",
+      logo: "assets/godot-logo.png",
       level: "Platformers, roguelikes, and mobile",
       color: "#32b06b",
       confidence: 92,
-      notes: "Godot projects ranging from browser platformers to dice roguelikes, survivor-like demos, and mobile concepts."
+      notes: "Built platforming movement, dice and card scoring systems, upgrade selection, enemy spawning, survivor-style progression, mobile input, and browser exports."
     }
   ],
   skills: [
     {
-      title: "Gameplay Systems",
-      text: "Player movement, combat loops, enemy pressure, pickups, objectives, and readable player feedback."
+      title: "Tool-First Workflow",
+      text: "I prioritize editor helpers, reusable systems, and setup tools early so later design changes take minutes instead of hours."
     },
     {
-      title: "Playable Prototypes",
-      text: "Fast experiments that become browser builds, school assignments, jam games, and polished portfolio pieces."
+      title: "Faster Iteration",
+      text: "I build tuning controls, debug feedback, and quick test loops that make it easier to try ideas, catch problems, and keep momentum."
     },
     {
-      title: "Genre Range",
-      text: "Arcade management, FPS, horror, platformers, fighting concepts, roguelikes, survivor-like demos, and mobile action."
+      title: "Reusable Gameplay Systems",
+      text: "Movement, objectives, pickups, spawning, scoring, upgrades, and UI are built in a way that can be adjusted across prototypes."
     },
     {
-      title: "Release Readiness",
-      text: "Public itch.io pages, browser-playable builds, downloadable builds, video showcases, and clear project presentation."
+      title: "Playable Faster",
+      text: "The goal is always to reach a testable build quickly, then use tools and feedback to make the actual game stronger."
     }
   ],
   projects: [
@@ -250,7 +254,7 @@ function applyTheme(theme) {
 }
 
 function setProfileContent() {
-  document.title = `${portfolio.name} - Game Developer Portfolio`;
+  document.title = portfolio.siteTitle;
   allBySelector("[data-profile-name]").forEach((node) => {
     node.textContent = portfolio.name;
   });
@@ -279,19 +283,26 @@ function renderEngines() {
   grid.innerHTML = "";
 
   portfolio.engines.forEach((engine) => {
-    const card = document.createElement("article");
+    const card = document.createElement("a");
     card.className = "engine-card";
+    card.href = "#work";
+    card.setAttribute("aria-label", `View ${engine.name} projects`);
+    const token = engine.logo
+      ? `<span class="engine-token has-logo" style="--engine-color:${engine.color}"><img src="${engine.logo}" alt="${engine.name} logo"></span>`
+      : `<span class="engine-token" style="background:${engine.color}">${engine.initials}</span>`;
+
     card.innerHTML = `
       <div class="engine-meta">
-        <span class="engine-token" style="background:${engine.color}">${engine.initials}</span>
-        <span class="engine-level">${engine.level}</span>
+        ${token}
       </div>
       <h3>${engine.name}</h3>
       <p>${engine.notes}</p>
-      <div class="meter" aria-label="${engine.name} experience confidence">
-        <span style="--meter-width:${engine.confidence}%; --meter-color:${engine.color}"></span>
-      </div>
     `;
+    card.addEventListener("click", () => {
+      state.activeEngine = engine.name;
+      renderFilters();
+      renderProjects();
+    });
     grid.appendChild(card);
   });
 }
@@ -504,14 +515,16 @@ function renderReel() {
   const reelUrl = portfolio.reelUrl.trim();
   const embedUrl = getVideoEmbedUrl(reelUrl);
   const directVideo = /\.(mp4|webm|ogg)$/i.test(reelUrl);
+  const needsFileFallback = window.location.protocol === "file:" && embedUrl.includes("youtube.com");
 
-  if (embedUrl) {
+  if (embedUrl && !needsFileFallback) {
     slot.innerHTML = `
       <iframe
         src="${embedUrl}"
         title="${portfolio.reelTitle}"
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
       </iframe>
     `;
@@ -537,7 +550,7 @@ function renderReel() {
       <div>
         <p class="reel-label">Gameplay reel</p>
         <h2>${portfolio.reelTitle}</h2>
-        <p>Gameplay clips, prototypes, and released projects.</p>
+        <p>${needsFileFallback ? "Open the reel on YouTube while previewing locally. The embed will play when the site is hosted." : "Gameplay clips, prototypes, and released projects."}</p>
         ${fallbackLink}
       </div>
     </div>

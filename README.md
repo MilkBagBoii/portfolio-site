@@ -1,4 +1,4 @@
-# Game Developer Portfolio
+# john-leonardo_portfolio_site
 
 Static portfolio site for a game developer with multi-engine experience, itch.io links, featured projects, and a final playable/released games section.
 
