@@ -1,141 +1,210 @@
 const portfolio = {
-  name: "Your Name",
-  initials: "GD",
-  itchUrl: "https://yourname.itch.io",
-  email: "you@example.com",
-  status: "Available for projects",
+  name: "John D Leonardo",
+  initials: "JDL",
+  itchUrl: "https://milkbagboii.itch.io/",
+  email: "johnleonardo207@gmail.com",
+  reelUrl: "",
+  reelTitle: "John D Leonardo work reel",
+  status: "Released games, prototypes, and in-development work",
   summary:
-    "Game developer building prototypes, jam games, and release-ready systems across Unity, Unreal Engine, Godot, and custom tools.",
+    "Game developer building released, browser-playable, and prototype projects across Unity, Unreal 5, and Godot.",
   engines: [
     {
       name: "Unity",
       initials: "U",
-      level: "Gameplay and tools",
+      level: "FPS prototypes and systems",
       color: "#31a8c9",
-      confidence: 92,
-      notes: "C# gameplay systems, UI flows, input, prototyping, WebGL builds, and iteration tooling."
+      confidence: 86,
+      notes: "Unity projects focused on FPS mechanics, browser-playable prototypes, changing levels, and replayable loadouts."
     },
     {
-      name: "Unreal",
+      name: "Unreal 5",
       initials: "UE",
-      level: "Blueprints and C++",
+      level: "Horror, action, and arcade games",
       color: "#ef4e3a",
-      confidence: 78,
-      notes: "Blueprint gameplay, C++ extensions, level scripting, animation hooks, and rapid grayboxing."
+      confidence: 88,
+      notes: "Unreal projects across retail chaos, horror exploration, fighting concepts, and quick assignment-scale games."
     },
     {
       name: "Godot",
       initials: "G",
-      level: "2D and lightweight 3D",
+      level: "Platformers, roguelikes, and mobile",
       color: "#32b06b",
-      confidence: 86,
-      notes: "GDScript architecture, scene composition, UI, game jams, and fast playable prototypes."
-    },
-    {
-      name: "Custom",
-      initials: "C",
-      level: "Web and native experiments",
-      color: "#7762d6",
-      confidence: 70,
-      notes: "Small engines, browser games, custom editors, procedural systems, and low-level experiments."
+      confidence: 92,
+      notes: "Godot projects ranging from browser platformers to dice roguelikes, survivor-like demos, and mobile concepts."
     }
   ],
   skills: [
     {
       title: "Gameplay Systems",
-      text: "Player movement, combat loops, ability systems, camera feel, pickups, objectives, and state-driven interactions."
+      text: "Player movement, combat loops, enemy pressure, pickups, objectives, and readable player feedback."
     },
     {
-      title: "Rapid Prototyping",
-      text: "Fast game-feel passes, jam-scoped production, throwaway tests, and turning rough mechanics into readable loops."
+      title: "Playable Prototypes",
+      text: "Fast experiments that become browser builds, school assignments, jam games, and polished portfolio pieces."
     },
     {
-      title: "Technical Art",
-      text: "Shader experiments, responsive effects, animation timing, feedback layers, and performance-aware polish."
+      title: "Genre Range",
+      text: "Arcade management, FPS, horror, platformers, fighting concepts, roguelikes, survivor-like demos, and mobile action."
     },
     {
       title: "Release Readiness",
-      text: "Menus, builds, itch.io pages, public links, playtest feedback, accessibility passes, and bug-fix loops."
+      text: "Public itch.io pages, browser-playable builds, downloadable builds, video showcases, and clear project presentation."
     }
   ],
   projects: [
     {
-      title: "Project One",
-      engine: "Unity",
-      type: "Action prototype",
-      status: "Playable",
-      year: "2026",
-      description:
-        "A tight movement prototype focused on readable combat, responsive controls, and fast restart loops.",
-      publicUrl: "https://yourname.itch.io/project-one",
-      sourceUrl: "",
-      colorA: "#31a8c9",
-      colorB: "#f3c84b"
-    },
-    {
-      title: "Project Two",
-      engine: "Godot",
-      type: "Jam game",
+      title: "Retail Overflow",
+      engine: "Unreal 5",
+      type: "Arcade game",
       status: "Released",
       year: "2025",
       description:
-        "A small complete game built under jam constraints, with a clean start-to-finish loop and public playable build.",
-      publicUrl: "https://yourname.itch.io/project-two",
-      sourceUrl: "",
-      colorA: "#32b06b",
-      colorB: "#171717"
-    },
-    {
-      title: "Project Three",
-      engine: "Unreal",
-      type: "Systems demo",
-      status: "Prototype",
-      year: "2025",
-      description:
-        "A Blueprint and C++ gameplay sandbox for interaction rules, stateful props, and encounter scripting.",
-      publicUrl: "",
-      sourceUrl: "",
-      colorA: "#ef4e3a",
-      colorB: "#7762d6"
-    },
-    {
-      title: "Project Four",
-      engine: "Custom",
-      type: "Browser game",
-      status: "Released",
-      year: "2024",
-      description:
-        "A lightweight browser game experiment with hand-tuned arcade feel and minimal custom rendering code.",
-      publicUrl: "https://yourname.itch.io/project-four",
+        "A hectic arcade game where you are the only employee on shift while the store overflows with customers. Use a broom to clean messes and keep customers in check before the manager gets upset.",
+      publicUrl: "https://milkbagboii.itch.io/retail-overflow",
+      videoUrl: "",
+      image: "assets/retail-overflow.png",
       sourceUrl: "",
       colorA: "#f3c84b",
       colorB: "#ef4e3a"
     },
     {
-      title: "Project Five",
+      title: "Artifactor",
+      engine: "Godot",
+      type: "Platformer game",
+      status: "Released, browser playable",
+      year: "2025",
+      description:
+        "A platformer where you commit an unseen crime and steal an artifact that was yours to begin with. The web version includes the full parody feature set.",
+      publicUrl: "https://milkbagboii.itch.io/artifactor",
+      videoUrl: "",
+      image: "assets/artifactor.png",
+      sourceUrl: "",
+      colorA: "#32b06b",
+      colorB: "#7762d6"
+    },
+    {
+      title: "S.A.R. (Search and Rescue)",
       engine: "Unity",
-      type: "Tooling",
-      status: "Prototype",
+      type: "FPS prototype",
+      status: "Playable, browser playable",
+      year: "2025",
+      description:
+        "Infiltrate a terrorist-occupied building and save every hostage across changing levels and different loadouts for each run.",
+      publicUrl: "https://milkbagboii.itch.io/sar",
+      videoUrl: "",
+      image: "assets/sar-logo.png",
+      imageMode: "contain",
+      sourceUrl: "",
+      colorA: "#31a8c9",
+      colorB: "#171717"
+    },
+    {
+      title: "Jester's Dice",
+      engine: "Godot",
+      type: "Roguelike game",
+      status: "Playable, browser playable",
+      year: "2025",
+      description:
+        "A Balatro-like dice game where action cards multiply your score across 20 rounds. Freeze the right dice, plan your rolls, and try to beat the Jester Dice.",
+      publicUrl: "https://milkbagboii.itch.io/jesters-dice",
+      videoUrl: "",
+      image: "assets/jesters-dice.png",
+      sourceUrl: "",
+      colorA: "#7762d6",
+      colorB: "#f3c84b"
+    },
+    {
+      title: "Project Cargo",
+      engine: "Unreal 5",
+      type: "Horror game",
+      status: "Playable",
       year: "2024",
       description:
-        "A designer-facing toolset for tuning encounters, testing values, and shortening iteration time.",
-      publicUrl: "",
+        "A horror game where you are dropped on a ship and must discover what happened to the crew while surviving what is still onboard.",
+      publicUrl: "https://gamejolt.com/games/thesc4ryg4am3/933438",
+      videoUrl: "",
+      image: "assets/project-cargo.png",
       sourceUrl: "",
       colorA: "#171717",
+      colorB: "#ef4e3a"
+    },
+    {
+      title: "Plague in the Park",
+      engine: "Godot",
+      type: "Vampire-survivor-like demo",
+      status: "Playable",
+      year: "2024",
+      description:
+        "As a lone scientist, hold off infected enemies, cure who you can, and survive as long as possible.",
+      publicUrl: "https://milkbagboii.itch.io/plague-in-th-park",
+      videoUrl: "",
+      image: "assets/plague-in-the-park.png",
+      sourceUrl: "",
+      colorA: "#32b06b",
       colorB: "#31a8c9"
     },
     {
-      title: "Project Six",
-      engine: "Godot",
-      type: "Puzzle game",
-      status: "Playable",
-      year: "2023",
+      title: "Untitled Fighter",
+      engine: "Unreal 5",
+      type: "Fighting game concept",
+      status: "Prototype",
+      year: "2024",
       description:
-        "A compact puzzle project centered on clarity, clean input handling, and a friendly difficulty curve.",
-      publicUrl: "https://yourname.itch.io/project-six",
+        "A couch-play 1v1 game about knights dueling to the death on the battlefield with swords, might, and a gun.",
+      publicUrl: "https://bubbacandy.itch.io/untitled-fighter",
+      videoUrl: "",
+      image: "assets/untitled-fighter.png",
       sourceUrl: "",
-      colorA: "#7762d6",
+      colorA: "#ef4e3a",
+      colorB: "#171717"
+    },
+    {
+      title: "RATZZZ",
+      engine: "Unreal 5",
+      type: "School assignment game",
+      status: "Prototype",
+      year: "2025",
+      description:
+        "Play as a hungry rat eating scraps to grow bigger, keep moving, and eventually reach the prized cheese.",
+      publicUrl: "https://milkbagboii.itch.io/ratzzz",
+      videoUrl: "",
+      image: "assets/ratzzz.png",
+      sourceUrl: "",
+      colorA: "#f3c84b",
       colorB: "#32b06b"
+    },
+    {
+      title: "Draw and Dash",
+      engine: "Godot",
+      type: "Mobile game prototype",
+      status: "Prototype",
+      year: "2026",
+      description:
+        "A mobile action prototype where you shoot your opponent while dodging bullets and earning periodic upgrades as the match progresses.",
+      publicUrl: "",
+      videoUrl: "https://www.youtube.com/@milkbagboii",
+      image: "assets/draw-and-dash-logo.png",
+      imageMode: "contain",
+      sourceUrl: "",
+      colorA: "#31a8c9",
+      colorB: "#32b06b"
+    },
+    {
+      title: "Crimson Noir",
+      engine: "Godot",
+      type: "FPS roguelite",
+      status: "In development",
+      year: "2026",
+      description:
+        "An FPS roguelite inspired by noir movies and the stark visual design of Kurosawa mode in Ghost of Tsushima.",
+      publicUrl: "",
+      videoUrl: "https://www.youtube.com/@milkbagboii",
+      image: "assets/crimson-noir-logo.png",
+      imageMode: "contain",
+      sourceUrl: "",
+      colorA: "#171717",
+      colorB: "#ef4e3a"
     }
   ]
 };
@@ -231,13 +300,19 @@ function renderProjects() {
 
     const publicLink = project.publicUrl
       ? `<a class="text-link" href="${project.publicUrl}" target="_blank" rel="noreferrer">Play / view</a>`
-      : `<span class="text-link secondary" aria-label="Private or unreleased project">Private build</span>`;
+      : `<span class="text-link secondary is-disabled" aria-label="Not currently playable">Not playable yet</span>`;
+    const videoLink = project.videoUrl
+      ? `<a class="text-link secondary" href="${project.videoUrl}" target="_blank" rel="noreferrer">Video</a>`
+      : "";
     const sourceLink = project.sourceUrl
       ? `<a class="text-link secondary" href="${project.sourceUrl}" target="_blank" rel="noreferrer">Source</a>`
       : "";
+    const art = project.image
+      ? `<img src="${project.image}" alt="${project.title} artwork">`
+      : `<span>${project.engine.slice(0, 2).toUpperCase()}</span>`;
 
     card.innerHTML = `
-      <div class="project-art" aria-hidden="true"><span>${project.engine.slice(0, 2).toUpperCase()}</span></div>
+      <div class="project-art ${project.imageMode === "contain" ? "is-contain" : ""}">${art}</div>
       <div class="project-body">
         <div class="tag-row">
           <span class="tag">${project.engine}</span>
@@ -246,7 +321,7 @@ function renderProjects() {
         </div>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
-        <div class="project-links">${publicLink}${sourceLink}</div>
+        <div class="project-links">${publicLink}${videoLink}${sourceLink}</div>
       </div>
     `;
     grid.appendChild(card);
@@ -275,11 +350,14 @@ function renderGamesList() {
 
   publicProjects.forEach((project) => {
     const row = document.createElement("article");
-    const statusClass = project.status.toLowerCase().includes("prototype")
+    const statusText = project.status.toLowerCase();
+    const statusClass = statusText.includes("prototype")
       ? "prototype"
-      : project.type.toLowerCase().includes("jam")
-        ? "jam"
-        : "";
+      : statusText.includes("development")
+        ? "development"
+        : project.type.toLowerCase().includes("jam")
+          ? "jam"
+          : "";
 
     row.className = "game-row";
     row.innerHTML = `
@@ -328,85 +406,88 @@ function setupHeaderShadow() {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-function drawReel() {
-  const canvas = bySelector("#game-reel");
-  const context = canvas.getContext("2d");
-  const colors = {
-    bg: "#101010",
-    grid: "#242424",
-    cyan: "#31a8c9",
-    red: "#ef4e3a",
-    yellow: "#f3c84b",
-    green: "#32b06b",
-    ink: "#171717",
-    paper: "#edf1ee",
-    violet: "#7762d6"
-  };
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let frame = 0;
-
-  function rect(x, y, width, height, fill) {
-    context.fillStyle = fill;
-    context.fillRect(Math.round(x), Math.round(y), Math.round(width), Math.round(height));
+function getVideoEmbedUrl(url) {
+  if (!url) {
+    return "";
   }
 
-  function loop() {
-    const width = canvas.width;
-    const height = canvas.height;
-    const t = reducedMotion ? 24 : frame;
-    context.clearRect(0, 0, width, height);
-    rect(0, 0, width, height, colors.bg);
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace(/^www\./, "");
 
-    for (let x = 0; x < width; x += 48) {
-      rect(x, 0, 2, height, colors.grid);
-    }
-    for (let y = 0; y < height; y += 48) {
-      rect(0, y, width, 2, colors.grid);
+    if (host === "youtu.be") {
+      return `https://www.youtube.com/embed/${parsed.pathname.slice(1)}`;
     }
 
-    const floor = height - 116;
-    rect(0, floor, width, 10, colors.paper);
-    rect(0, floor + 10, width, 86, "#1b1b1b");
+    if (host === "youtube.com" || host === "m.youtube.com") {
+      if (parsed.pathname === "/watch") {
+        const id = parsed.searchParams.get("v");
+        return id ? `https://www.youtube.com/embed/${id}` : "";
+      }
 
-    for (let i = 0; i < 9; i += 1) {
-      const platformX = ((i * 156 - t * 2) % (width + 180)) - 90;
-      const platformY = 160 + (i % 3) * 82;
-      rect(platformX, platformY, 112, 16, [colors.cyan, colors.red, colors.green][i % 3]);
-      rect(platformX + 12, platformY + 16, 88, 8, "#0a0a0a");
+      if (parsed.pathname.startsWith("/shorts/")) {
+        return `https://www.youtube.com/embed/${parsed.pathname.split("/")[2]}`;
+      }
+
+      if (parsed.pathname.startsWith("/embed/")) {
+        return url;
+      }
     }
 
-    const playerX = 170 + Math.sin(t / 18) * 22;
-    const playerY = floor - 52 + Math.sin(t / 10) * 8;
-    rect(playerX, playerY, 42, 42, colors.yellow);
-    rect(playerX + 8, playerY - 20, 26, 22, colors.paper);
-    rect(playerX + 29, playerY + 12, 8, 8, colors.bg);
-    rect(playerX - 16, playerY + 16, 18, 12, colors.red);
-    rect(playerX + 38, playerY + 16, 28, 12, colors.cyan);
-
-    for (let i = 0; i < 6; i += 1) {
-      const orbX = width - 180 - i * 92 + Math.sin(t / 20 + i) * 18;
-      const orbY = 110 + i * 58 + Math.cos(t / 16 + i) * 16;
-      rect(orbX, orbY, 22, 22, [colors.green, colors.yellow, colors.violet][i % 3]);
+    if (host === "vimeo.com") {
+      const id = parsed.pathname.split("/").filter(Boolean).pop();
+      return id ? `https://player.vimeo.com/video/${id}` : "";
     }
-
-    rect(width - 242, floor - 116, 168, 88, "#f7f2e8");
-    rect(width - 226, floor - 100, 136, 18, colors.ink);
-    rect(width - 226, floor - 70, 92, 14, colors.cyan);
-    rect(width - 226, floor - 44, 120, 14, colors.red);
-
-    context.fillStyle = colors.paper;
-    context.font = "700 26px Inter, Arial, sans-serif";
-    context.fillText("PLAYABLE", 36, 58);
-    context.fillStyle = colors.yellow;
-    context.fillText("MULTI-ENGINE", 36, 92);
-
-    frame += 1;
-    if (!reducedMotion) {
-      requestAnimationFrame(loop);
-    }
+  } catch {
+    return "";
   }
 
-  loop();
+  return "";
+}
+
+function renderReel() {
+  const slot = bySelector("[data-reel-slot]");
+  const reelUrl = portfolio.reelUrl.trim();
+  const embedUrl = getVideoEmbedUrl(reelUrl);
+  const directVideo = /\.(mp4|webm|ogg)$/i.test(reelUrl);
+
+  if (embedUrl) {
+    slot.innerHTML = `
+      <iframe
+        src="${embedUrl}"
+        title="${portfolio.reelTitle}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    `;
+    return;
+  }
+
+  if (directVideo) {
+    slot.innerHTML = `
+      <video controls preload="metadata">
+        <source src="${reelUrl}">
+      </video>
+    `;
+    return;
+  }
+
+  const fallbackLink = reelUrl
+    ? `<a class="button button-primary" href="${reelUrl}" target="_blank" rel="noreferrer">Open reel</a>`
+    : "";
+
+  slot.innerHTML = `
+    <div class="reel-placeholder">
+      <div class="play-mark" aria-hidden="true"></div>
+      <div>
+        <p class="reel-label">Gameplay reel</p>
+        <h2>${portfolio.reelTitle}</h2>
+        <p>Gameplay clips, prototypes, and released projects.</p>
+        ${fallbackLink}
+      </div>
+    </div>
+  `;
 }
 
 setProfileContent();
@@ -417,4 +498,4 @@ renderSkills();
 renderGamesList();
 setupNavigation();
 setupHeaderShadow();
-drawReel();
+renderReel();
