@@ -6,6 +6,17 @@
     <meta name="description" content="John D Leonardo game developer portfolio with Unity, Unreal 5, Godot, and released games.">
     <title>John D Leonardo - Game Developer Portfolio</title>
     <link rel="icon" href="data:,">
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem("portfolio-theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -31,6 +42,10 @@
           <a href="#games">Released Games</a>
           <a href="#contact">Contact</a>
           <a class="nav-itch" href="https://milkbagboii.itch.io/" target="_blank" rel="noreferrer" data-itch-link>itch.io</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="sr-only" data-theme-toggle-text>Switch to dark mode</span>
+          </button>
         </div>
       </nav>
     </header>

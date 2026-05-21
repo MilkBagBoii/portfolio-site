@@ -15,6 +15,8 @@ Open `script.js` and update the `portfolio` object at the top:
 
 Any project with a `publicUrl` automatically appears in the final "Playable and released" section.
 
+The dark mode button saves the visitor's theme choice in their browser.
+
 ## Open The Site
 
 Open `index.html` in your browser. No build step or dev server is required.
