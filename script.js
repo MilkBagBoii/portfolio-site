@@ -8,7 +8,7 @@ const portfolio = {
   reelTitle: "John D Leonardo work reel",
   status: "Released games, prototypes, and in-development work",
   summary:
-    "Game developer building released, browser-playable, and prototype projects across Unity, Unreal 5, and Godot.",
+    "I am a game developer focused on building tools and systems first, so projects move faster and ideas can become playable sooner. I work across Unity, Unreal 5, and Godot, with projects ranging from FPS prototypes and horror interactions to arcade management games, platformers, roguelikes, and mobile concepts.",
   engines: [
     {
       name: "Unity",
@@ -267,7 +267,10 @@ function setProfileContent() {
     emailLink.href = `mailto:${portfolio.email}`;
   }
 
-  bySelector(".brand-mark").textContent = portfolio.initials;
+  const brandMark = bySelector(".brand-mark");
+  if (brandMark) {
+    brandMark.textContent = portfolio.initials;
+  }
   bySelector("[data-profile-summary]").textContent = portfolio.summary;
   bySelector("[data-build-status]").textContent = portfolio.status;
   bySelector("[data-contact-heading]").textContent = "Let us build something playable.";

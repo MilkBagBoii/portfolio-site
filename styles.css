@@ -141,19 +141,9 @@ textarea {
   font-weight: 800;
 }
 
-.brand-mark {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  color: var(--panel-strong);
-  background: var(--ink);
-  border: 2px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 4px 4px 0 var(--yellow);
-}
-
 .brand-text {
+  color: var(--ink);
+  font-weight: 950;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -293,12 +283,59 @@ html[data-theme="dark"] .theme-toggle-icon::before {
   align-items: center;
 }
 
+.hero-copy {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-strong);
+  box-shadow: var(--shadow), 8px 8px 0 var(--yellow);
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--red);
   font-size: 0.84rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.hero-identity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 18px;
+  align-items: start;
+  flex: 1;
+}
+
+.hero-identity .eyebrow {
+  margin-bottom: 10px;
+}
+
+.hero-bio {
+  min-width: 0;
+}
+
+.hero-bio h1 {
+  font-size: clamp(1.8rem, 3.1vw, 2.15rem);
+  white-space: nowrap;
+}
+
+.profile-photo {
+  width: 190px;
+  height: 250px;
+  min-height: 250px;
+  display: block;
+  object-fit: cover;
+  object-position: center 34%;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-strong);
+  box-shadow: 5px 5px 0 var(--cyan);
 }
 
 h1,
@@ -342,8 +379,8 @@ h3 {
 
 .hero-lede {
   max-width: 680px;
-  margin: 22px 0 0;
-  font-size: 1.2rem;
+  margin: 14px 0 0;
+  font-size: 1.08rem;
 }
 
 .hero-actions,
@@ -352,6 +389,19 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
+}
+
+.hero-actions {
+  flex-wrap: nowrap;
+  margin-top: 18px;
+}
+
+.hero-actions .button {
+  flex: 1 1 0;
+  min-height: 40px;
+  min-width: 0;
+  padding: 9px 12px;
+  font-size: 0.92rem;
 }
 
 .button {
@@ -393,20 +443,20 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  width: min(100%, 620px);
-  margin: 34px 0 0;
+  width: 100%;
+  margin: 0;
 }
 
 .signal-strip div {
-  min-height: 94px;
-  padding: 16px;
+  min-height: 78px;
+  padding: 12px;
   border: 2px solid var(--line);
   border-radius: var(--radius);
   background: var(--panel-strong);
 }
 
 .signal-strip dt {
-  font-size: 2.1rem;
+  font-size: 1.85rem;
   font-weight: 950;
   line-height: 1;
 }
@@ -439,6 +489,11 @@ h3 {
   border-bottom: 2px solid #393939;
   font-size: 0.82rem;
   font-weight: 900;
+}
+
+html[data-theme="dark"] .reel-topline,
+html[data-theme="dark"] .reel-controls {
+  color: #ffffff;
 }
 
 .reel-controls {
@@ -922,6 +977,10 @@ h3 {
     max-width: 720px;
   }
 
+  .hero-copy {
+    max-width: 720px;
+  }
+
   .engine-grid,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -985,6 +1044,21 @@ h3 {
     font-size: 1.05rem;
   }
 
+  .hero-identity {
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 16px;
+  }
+
+  .hero-bio h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 188px;
+    min-height: 188px;
+  }
+
   .signal-strip,
   .engine-grid,
   .project-grid,
@@ -1021,9 +1095,32 @@ h3 {
     font-size: 2.35rem;
   }
 
+  .hero-identity {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-bio h1 {
+    font-size: clamp(1.55rem, 9vw, 2rem);
+    white-space: normal;
+  }
+
+  .profile-photo {
+    width: min(100%, 260px);
+    height: 300px;
+    min-height: 300px;
+  }
+
   .button,
-  .hero-actions .button,
   .footer-actions .button {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .button {
+    flex-basis: 100%;
     width: 100%;
   }
 
