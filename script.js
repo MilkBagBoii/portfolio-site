@@ -217,41 +217,8 @@ const state = {
   activeEngine: "All"
 };
 
-const THEME_STORAGE_KEY = "portfolio-theme";
 const bySelector = (selector) => document.querySelector(selector);
 const allBySelector = (selector) => Array.from(document.querySelectorAll(selector));
-
-function getPreferredTheme() {
-  try {
-    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    if (storedTheme === "dark" || storedTheme === "light") {
-      return storedTheme;
-    }
-  } catch {
-    return document.documentElement.dataset.theme || "light";
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
-
-function applyTheme(theme) {
-  const nextTheme = theme === "dark" ? "dark" : "light";
-  const toggle = bySelector("[data-theme-toggle]");
-  const label = bySelector("[data-theme-toggle-text]");
-  const actionText = nextTheme === "dark" ? "Switch to light mode" : "Switch to dark mode";
-
-  document.documentElement.dataset.theme = nextTheme;
-
-  if (toggle) {
-    toggle.setAttribute("aria-pressed", String(nextTheme === "dark"));
-    toggle.setAttribute("aria-label", actionText);
-    toggle.title = actionText;
-  }
-
-  if (label) {
-    label.textContent = actionText;
-  }
-}
 
 function setProfileContent() {
   document.title = portfolio.siteTitle;
@@ -275,10 +242,6 @@ function setProfileContent() {
   bySelector("[data-build-status]").textContent = portfolio.status;
   bySelector("[data-contact-heading]").textContent = "Let us build something playable.";
 
-  const playableCount = portfolio.projects.filter((project) => project.publicUrl).length;
-  bySelector("[data-stat-engines]").textContent = portfolio.engines.length;
-  bySelector("[data-stat-projects]").textContent = portfolio.projects.length;
-  bySelector("[data-stat-playable]").textContent = playableCount;
 }
 
 function renderEngines() {
@@ -443,31 +406,10 @@ function setupNavigation() {
   });
 }
 
-function setupThemeToggle() {
-  const toggle = bySelector("[data-theme-toggle]");
-  if (!toggle) {
-    return;
-  }
-
-  applyTheme(document.documentElement.dataset.theme || getPreferredTheme());
-
-  toggle.addEventListener("click", () => {
-    const currentTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-    const nextTheme = currentTheme === "dark" ? "light" : "dark";
-
-    applyTheme(nextTheme);
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-    } catch {
-      // The theme still changes for the current page, even if storage is unavailable.
-    }
-  });
-}
-
 function setupHeaderShadow() {
   const header = bySelector("[data-nav]");
   const onScroll = () => {
-    header.style.boxShadow = window.scrollY > 12 ? "0 8px 30px rgba(23, 23, 23, 0.12)" : "none";
+    header.style.boxShadow = window.scrollY > 12 ? "0 10px 34px rgba(0, 0, 0, 0.36)" : "none";
   };
 
   onScroll();
@@ -567,6 +509,5 @@ renderProjects();
 renderSkills();
 renderGamesList();
 setupNavigation();
-setupThemeToggle();
 setupHeaderShadow();
 renderReel();

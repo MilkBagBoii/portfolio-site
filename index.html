@@ -6,17 +6,6 @@
     <meta name="description" content="john-leonardo_portfolio_site: John D Leonardo game developer portfolio with Unity, Unreal 5, Godot, and released games.">
     <title>john-leonardo_portfolio_site</title>
     <link rel="icon" href="data:,">
-    <script>
-      (function () {
-        try {
-          var savedTheme = localStorage.getItem("portfolio-theme");
-          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
-        } catch (error) {
-          document.documentElement.dataset.theme = "light";
-        }
-      })();
-    </script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -41,10 +30,6 @@
           <a href="#games">Released Games</a>
           <a href="#contact">Contact</a>
           <a class="nav-itch" href="https://milkbagboii.itch.io/" target="_blank" rel="noreferrer" data-itch-link>itch.io</a>
-          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
-            <span class="theme-toggle-icon" aria-hidden="true"></span>
-            <span class="sr-only" data-theme-toggle-text>Switch to dark mode</span>
-          </button>
         </div>
       </nav>
     </header>
@@ -53,6 +38,10 @@
       <section class="hero section-band" aria-labelledby="hero-title">
         <div class="hero-grid">
           <div class="hero-copy">
+            <div class="panel-topline" aria-hidden="true">
+              <span>profile.boot</span>
+              <span>systems online</span>
+            </div>
             <div class="hero-identity">
               <div class="hero-bio">
                 <p class="eyebrow">Tools-first game developer</p>
@@ -69,33 +58,20 @@
               </div>
               <img class="profile-photo" src="assets/john-leonardo-photo.jpg" alt="John D Leonardo">
             </div>
-
-            <dl class="signal-strip" aria-label="Portfolio highlights">
-              <div>
-                <dt data-stat-engines>4</dt>
-                <dd>Engines</dd>
-              </div>
-              <div>
-                <dt data-stat-projects>8</dt>
-                <dd>Projects</dd>
-              </div>
-              <div>
-                <dt data-stat-playable>5</dt>
-                <dd>Published</dd>
-              </div>
-            </dl>
           </div>
 
-          <div class="hero-reel" aria-label="Work video reel">
-            <div class="reel-topline">
-              <span>Work reel</span>
-              <span data-build-status>Available for projects</span>
-            </div>
-            <div class="reel-slot" data-reel-slot></div>
-            <div class="reel-controls" aria-label="Reel details">
-              <span>Gameplay</span>
-              <span>Prototypes</span>
-              <span>Released work</span>
+          <div class="hero-stack">
+            <div class="hero-reel" aria-label="Work video reel">
+              <div class="reel-topline">
+                <span>Work reel</span>
+                <span data-build-status>Available for projects</span>
+              </div>
+              <div class="reel-slot" data-reel-slot></div>
+              <div class="reel-controls" aria-label="Reel details">
+                <span>Gameplay</span>
+                <span>Prototypes</span>
+                <span>Released work</span>
+              </div>
             </div>
           </div>
         </div>
