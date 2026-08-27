@@ -282,8 +282,8 @@ textarea {
 
 .hero-identity {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  gap: 26px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: stretch;
   flex: 1;
 }
@@ -299,19 +299,6 @@ textarea {
 .hero-bio h1 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   white-space: nowrap;
-}
-
-.profile-photo {
-  width: 260px;
-  height: 100%;
-  min-height: 330px;
-  display: block;
-  object-fit: cover;
-  object-position: center 34%;
-  border: 1px solid var(--cyan);
-  border-radius: var(--radius);
-  background: var(--panel-strong);
-  box-shadow: 0 0 0 1px rgba(65, 217, 255, 0.16), var(--shadow);
 }
 
 h1,
@@ -1016,12 +1003,6 @@ h3 {
     white-space: normal;
   }
 
-  .profile-photo {
-    width: min(100%, 320px);
-    height: 360px;
-    min-height: 360px;
-  }
-
   .engine-grid,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1106,18 +1087,6 @@ h3 {
   }
 }
 
-@media (max-width: 620px) {
-  .hero-identity {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-    width: min(100%, 280px);
-    height: 300px;
-    min-height: 300px;
-  }
-}
-
 @media (max-width: 460px) {
   .nav-shell,
   .hero-grid,
@@ -1143,12 +1112,6 @@ h3 {
   .hero-bio h1 {
     font-size: clamp(1.55rem, 9vw, 2rem);
     white-space: normal;
-  }
-
-  .profile-photo {
-    width: min(100%, 260px);
-    height: 300px;
-    min-height: 300px;
   }
 
   .button,
